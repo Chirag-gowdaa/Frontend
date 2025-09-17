@@ -29,6 +29,16 @@ const AboutUs = () => {
       name: 'Chirag S',
       role: 'linux expert',
       image: '👨‍💻'
+    },
+    {
+      name: 'prajwal G',
+      role: 'web developer',
+      image: '👨‍💻'
+    },
+    {
+      name: 'Punithraj R',
+      role: 'Team lead and windows specialist',
+      image: '👨‍💻'
     }
   ]
 

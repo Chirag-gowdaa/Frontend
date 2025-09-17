@@ -1,6 +1,9 @@
-import React from 'react'
+import React from "react";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+
+  const [gmail, setGmail] = useState('')
   const operatingSystems = [
     {
       name: 'Windows',
@@ -26,7 +29,6 @@ const Home = () => {
   ]
 
   const handleDownload = (link, osName) => {
-    // In a real application, this would trigger the actual download
     alert(`Download would start for ${osName}. File: ${link}`)
   }
 
@@ -44,8 +46,15 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="main-content">
+        
+      </section>
+
       {/* Operating Systems Section */}
       <section className="main-content">
+        <div className="container">
+              <input value={gmail} onChange={(event) => {setGmail(event.target.value)}} placeholder="Enter your email" />
+        </div>
         <div className="container">
           <h2 className="section-title">Choose Your Platform</h2>
           <p className="section-subtitle">

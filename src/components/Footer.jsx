@@ -3,6 +3,12 @@ import React from 'react'
 const Footer = () => {
   const teamMembers = [
     {
+      name: 'Punithraj R',
+      role: 'Team lead and windows specialist',
+      email: '',
+      phone: 'xxxxx9'
+    },
+    {
       name: 'vineeth',
       role: 'Android Developer',
       email: '',
