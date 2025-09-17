@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-content">
           <Link to="/" className="navbar-brand">
-            Wipe Ease
+            Data Gone
           </Link>
 
           {/* Desktop Navigation */}
