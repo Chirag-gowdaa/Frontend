@@ -2,16 +2,9 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+
 const Home = () => {
   const [gmail, setGmail] = useState("");
-
-  const handleDownload = (link, osName) => {
-    if (osName === "Linux") {
-      window.location.href = "/linux"; // navigate to Linux page
-    } else {
-      alert(`Download would start for ${osName}. File: ${link}`);
-    }
-  };
 
   return (
     <div style={{ fontFamily: "Arial, sans-serif", color: "#111" }}>
@@ -107,24 +100,25 @@ const Home = () => {
               <li>DoD 5220.22-M Standard</li>
               <li>GUI Interface</li>
             </ul>
-            <button
-              onClick={() =>
-                handleDownload("/downloads/windows-wiper.exe", "Windows")
-              }
+            <a
+              href="/downloads/windows-wiper.exe"
+              download
               style={{
                 marginTop: "20px",
+                display: "block",
+                textAlign: "center",
                 width: "100%",
                 padding: "10px",
                 background: "#4f46e5",
                 color: "#fff",
                 borderRadius: "8px",
                 border: "none",
-                cursor: "pointer",
                 fontWeight: "bold",
+                textDecoration: "none",
               }}
             >
               📥 Download for Windows
-            </button>
+            </a>
           </div>
 
           {/* Linux Block */}
@@ -150,25 +144,24 @@ const Home = () => {
               <li>CLI & GUI</li>
               <li>Open Source</li>
             </ul>
-            <button
-              onClick={() => handleDownload("/linux", "Linux")}
+            <Link
+              to="/Linux"
               style={{
                 marginTop: "20px",
+                display: "block",
+                textAlign: "center",
                 width: "100%",
                 padding: "10px",
                 background: "#4f46e5",
                 color: "#fff",
                 borderRadius: "8px",
                 border: "none",
-                cursor: "pointer",
                 fontWeight: "bold",
+                textDecoration: "none",
               }}
             >
-              <Link to="/Linux" style={{ color: "#fff", textDecoration: "none" }}>
-                📥 Setup for Linux
-              </Link>
-
-            </button>
+              📥 Setup for Linux
+            </Link>
           </div>
 
           {/* Android Block */}
@@ -194,24 +187,25 @@ const Home = () => {
               <li>SD Card Support</li>
               <li>Root & Non-Root</li>
             </ul>
-            <button
-              onClick={() =>
-                handleDownload("/downloads/android-wiper.apk", "Android")
-              }
+            <a
+              href="https://github.com/Vineeth20-05/DataWipeApp/releases/download/v1.0/app-debug.apk"
+              download
               style={{
                 marginTop: "20px",
+                display: "block",
+                textAlign: "center",
                 width: "100%",
                 padding: "10px",
                 background: "#4f46e5",
                 color: "#fff",
                 borderRadius: "8px",
                 border: "none",
-                cursor: "pointer",
                 fontWeight: "bold",
+                textDecoration: "none",
               }}
             >
               📥 Download for Android
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -287,8 +281,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
-<Footer />
+
 export default Home;
