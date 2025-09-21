@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import Downloads from './pages/Downloads'
-import Linux from './pages/linux'
+import Linux from './pages/Linux'
 function App() {
   return (
     <Router>
